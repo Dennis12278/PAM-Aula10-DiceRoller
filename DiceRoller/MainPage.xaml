@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiceRoller.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                x:Name="DadoImage"
+                Source="dado1.png"
+                HeightRequest="140"
+                WidthRequest="140"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Imagem de um dado" />
+
+            <Label
+                x:Name="ResultadoLabel"
+                Text="6"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+            <Entry
+                x:Name="LadosEntry"
+                Keyboard="Numeric"
+                TextChanged="LadosEntry_TextChanged"
+                Text="0"
+                Placeholder="Digite a quantidade de lados"/>
+            <Button
+                x:Name="SorteioButton"
+                Text="Rolar o dado" 
+                SemanticProperties.Hint="Sorteia um número do dado"
+                Clicked="SorteioButton_Clicked"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
