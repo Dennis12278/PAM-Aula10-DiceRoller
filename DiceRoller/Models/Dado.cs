@@ -11,7 +11,7 @@ namespace DiceRoller.Models
             NumeroDeLados = 6;
         }
 
-        public Dado(int numero)
+        public Dado(int numero) 
         {
             NumeroDeLados = numero;
         }
